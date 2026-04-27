@@ -1,12 +1,12 @@
-// src/sections/Projects/FilterBar.tsx
 "use client";
 import { FilterType } from './index';
+import { motion } from 'framer-motion';
 
 interface FilterBarProps {
   activeFilter: FilterType;
   setActiveFilter: (filter: FilterType) => void;
   locale: string;
-  filterOptions: FilterType[]; // Reçu dynamiquement
+  filterOptions: FilterType[]; 
 }
 
 const FilterBar = ({ activeFilter, setActiveFilter, locale, filterOptions }: FilterBarProps) => {
@@ -18,7 +18,7 @@ const FilterBar = ({ activeFilter, setActiveFilter, locale, filterOptions }: Fil
         professional: 'Professionnels', 
         personal: 'Personnels', 
         academic: 'Académiques',
-        freelance: 'Freelance' // Gardé au cas où, mais ne sera pas utilisé si filtré
+        freelance: 'Freelance'
       }
     : { 
         featured: '⭐ Top', 
@@ -30,20 +30,30 @@ const FilterBar = ({ activeFilter, setActiveFilter, locale, filterOptions }: Fil
       };
 
   return (
-    <div className="flex justify-start md:justify-center overflow-x-auto pb-6 md:pb-0 no-scrollbar flex-nowrap md:flex-wrap gap-3 mb-12">
-      {filterOptions.map(cat => (
-        <button
-          key={cat}
-          onClick={() => setActiveFilter(cat)}
-          className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all whitespace-nowrap ${
-            activeFilter === cat 
-            ? 'bg-accent text-white shadow-lg shadow-accent/20' 
-            : 'bg-gray-100 dark:bg-white/5 text-gray-500 hover:bg-gray-200 dark:hover:bg-white/10'
-          }`}
-        >
-          {labels[cat]}
-        </button>
-      ))}
+    <div className="flex justify-start md:justify-center overflow-x-auto pb-4 no-scrollbar flex-nowrap md:flex-wrap gap-3">
+      {filterOptions.map(cat => {
+        const isActive = activeFilter === cat;
+        return (
+          <button
+            key={cat}
+            onClick={() => setActiveFilter(cat)}
+            className={`relative px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wider transition-colors whitespace-nowrap overflow-hidden ${
+              isActive 
+              ? 'text-white' 
+              : 'bg-slate-100 dark:bg-slate-800/50 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
+            }`}
+          >
+            {isActive && (
+              <motion.div
+                layoutId="activeFilterBubble"
+                className="absolute inset-0 bg-cyan-500 dark:bg-cyan-500"
+                transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+              />
+            )}
+            <span className="relative z-10">{labels[cat]}</span>
+          </button>
+        );
+      })}
     </div>
   );
 };
