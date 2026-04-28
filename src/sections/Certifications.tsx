@@ -29,7 +29,7 @@ const Certifications = ({ dictionary }: { dictionary: typeof en }) => {
             <Award className="text-amber-600 dark:text-amber-400" size={24} />
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-0.5">07 /</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-amber-600 dark:text-amber-400 mb-0.5">06 /</p>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
               {dictionary.sectionTitles.certifications}
             </h2>

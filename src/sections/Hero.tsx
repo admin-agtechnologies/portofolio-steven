@@ -170,9 +170,9 @@ const Hero = ({ dictionary }: HeroProps) => {
               <div className="relative bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 p-1 rounded-full shadow-2xl shadow-cyan-500/30">
                 <div className="bg-white dark:bg-dark-background rounded-full p-1.5">
                   <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full overflow-hidden bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800">
-                    {/* Profile image — place /public/images/profile.jpg */}
+                    {/* Profile image — /public/photo-s.jpeg */}
                     <img
-                      src="/images/profile.jpg"
+                      src="/photo-s.jpeg"
                       alt="Steven Mbiamy"
                       className="w-full h-full object-cover object-top"
                       onError={(e) => {

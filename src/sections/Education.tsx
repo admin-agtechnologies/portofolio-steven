@@ -28,7 +28,7 @@ const Education = ({ dictionary }: { dictionary: typeof en }) => {
             <GraduationCap className="text-indigo-600 dark:text-indigo-400" size={24} />
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-0.5">06 /</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-indigo-600 dark:text-indigo-400 mb-0.5">05 /</p>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
               {dictionary.sectionTitles.education}
             </h2>

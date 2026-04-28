@@ -11,7 +11,6 @@ import About from '@/sections/About';
 import Experience from '@/sections/Experience';
 import Projects from '@/sections/Projects/index';
 import Skills from '@/sections/Skills';
-import Leadership from '@/sections/Leadership';
 import Education from '@/sections/Education';
 import Certifications from '@/sections/Certifications';
 import Contact from '@/sections/Contact';
@@ -27,7 +26,6 @@ export default function Home() {
       <Experience dictionary={dictionary} />
       <Projects dictionary={dictionary} />
       <Skills dictionary={dictionary} />
-      <Leadership dictionary={dictionary} />
       <Education dictionary={dictionary} />
       <Certifications dictionary={dictionary} />
       <Contact dictionary={dictionary} />

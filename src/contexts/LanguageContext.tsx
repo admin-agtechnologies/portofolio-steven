@@ -1,9 +1,8 @@
 // src/contexts/LanguageContext.tsx
 "use client";
 
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, useEffect, ReactNode } from 'react';
 
-// Définir les langues possibles
 export type Locale = 'fr' | 'en';
 
 interface LanguageContextType {
@@ -11,27 +10,31 @@ interface LanguageContextType {
   setLocale: (locale: Locale) => void;
 }
 
-// Créer le contexte avec une valeur par défaut
 export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Créer le "Provider" qui enveloppera notre application
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [locale, setLocaleState] = useState<Locale>(() => {
+  // Always start with 'en' so server and client initial render match → no hydration error
+  const [locale, setLocaleState] = useState<Locale>('en');
+
+  // After mount: load the user's saved preference from localStorage
+  useEffect(() => {
     try {
       const saved = localStorage.getItem('locale') as Locale | null;
       if (saved && ['fr', 'en'].includes(saved)) {
-        return saved;
+        setLocaleState(saved);
       }
     } catch {
-      // localStorage might be unavailable or throw; fall back to default
+      // localStorage unavailable (SSR guard)
     }
-    return 'en';
-  }); // Anglais par défaut au premier chargement
+  }, []);
 
-  // Fonction pour changer la langue et la sauvegarder
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale);
-    localStorage.setItem('locale', newLocale);
+    try {
+      localStorage.setItem('locale', newLocale);
+    } catch {
+      // ignore
+    }
   };
 
   return (

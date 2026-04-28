@@ -2,7 +2,7 @@
 
 import { en } from '@/dictionaries/en';
 import { motion } from 'framer-motion';
-import { Code2, Server, Database, Wrench, User } from 'lucide-react';
+import { Code2, Server, Database, BrainCircuit, User } from 'lucide-react';
 
 interface AboutProps {
   dictionary: typeof en;
@@ -26,17 +26,17 @@ const strengthCards = [
     icon_color: 'text-blue-600 dark:text-blue-400',
   },
   {
-    icon: Database,
-    label: 'Bases de Données',
-    desc: 'PostgreSQL · MySQL',
-    bg: 'bg-indigo-50 dark:bg-indigo-500/10',
-    border: 'border-indigo-100 dark:border-indigo-500/20',
-    icon_color: 'text-indigo-600 dark:text-indigo-400',
+    icon: BrainCircuit,
+    label: 'IA & Machine Learning',
+    desc: 'TensorFlow · Keras · Flask · Pandas',
+    bg: 'bg-emerald-50 dark:bg-emerald-500/10',
+    border: 'border-emerald-100 dark:border-emerald-500/20',
+    icon_color: 'text-emerald-600 dark:text-emerald-400',
   },
   {
-    icon: Wrench,
-    label: 'Outils & DevOps',
-    desc: 'Git · Docker · Postman · Figma',
+    icon: Database,
+    label: 'Data & DevOps',
+    desc: 'PostgreSQL · MySQL · Docker · Git',
     bg: 'bg-violet-50 dark:bg-violet-500/10',
     border: 'border-violet-100 dark:border-violet-500/20',
     icon_color: 'text-violet-600 dark:text-violet-400',

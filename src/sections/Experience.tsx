@@ -11,20 +11,20 @@ interface SectionProps {
 }
 
 const companyColors: Record<string, { dot: string; badge: string; ring: string }> = {
-  'icorp-frontend': {
+  alanya: {
     dot: 'bg-cyan-500',
     badge: 'bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-500/10 dark:text-cyan-300 dark:border-cyan-500/25',
     ring: 'ring-cyan-500/20',
   },
-  alanya: {
+  greenscan: {
+    dot: 'bg-emerald-500',
+    badge: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/25',
+    ring: 'ring-emerald-500/20',
+  },
+  'ztf-frontend': {
     dot: 'bg-blue-500',
     badge: 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-500/10 dark:text-blue-300 dark:border-blue-500/25',
     ring: 'ring-blue-500/20',
-  },
-  decatechs: {
-    dot: 'bg-indigo-500',
-    badge: 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-500/10 dark:text-indigo-300 dark:border-indigo-500/25',
-    ring: 'ring-indigo-500/20',
   },
 };
 
@@ -98,7 +98,7 @@ const Experience = ({ dictionary }: SectionProps) => {
                         </span>
                         <span className="flex items-center gap-1 text-xs text-slate-400 dark:text-slate-500">
                           <MapPin size={11} />
-                          Yaoundé
+                          {exp.id === 'ztf-frontend' ? 'Bertoua' : 'Yaoundé'}
                         </span>
                       </div>
                     </div>

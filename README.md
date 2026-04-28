@@ -7,9 +7,6 @@ This is my personal portfolio built with **Next.js**, showcasing my projects, sk
 
 ![Portfolio Demo](./public/images/projects/portfolio-v2.png)
 
-## 🌐 Live Preview
-
-Check it out live here: [Portfolio Live](#https://nomo-gabriel-portfolio.vercel.app/)  
 
 
 ## 🚀 Features
@@ -38,7 +35,7 @@ Follow these steps to run the portfolio locally:
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/NOMO-Gabriel/my-portfolio.git
+    git clone https://github.com/admin-agtechnologies/portofolio-steven.git
     ```
 
 2. **Navigate to the project directory**:

@@ -23,6 +23,7 @@ const frontendSkills = [
 const databaseSkills = [
   { name: "PostgreSQL" },
   { name: "MySQL" },
+  { name: "MariaDB" },
 ];
 
 const toolsAndMethodsSkills = [
@@ -30,14 +31,19 @@ const toolsAndMethodsSkills = [
   { name: "Docker" },
   { name: "Postman" },
   { name: "Figma" },
-  { name: "API REST" },
-  { name: "UML" },
+  { name: "WebRTC / Socket.IO" },
+  { name: "REST API" },
+  { name: "JWT" },
   { name: "Agile/Scrum" },
-  { name: "Jira" },
 ];
 
-// Pas de spécialité IA pour Steven — tableau vide pour éviter l'erreur .map()
-const aiDataSkills: { name: string }[] = [];
+const aiDataSkills = [
+  { name: "TensorFlow / Keras" },
+  { name: "Flask" },
+  { name: "Pandas" },
+  { name: "Scikit-learn" },
+  { name: "Matplotlib" },
+];
 
 export const skillsData: SkillsData = {
   backend: backendSkills,
@@ -53,11 +59,21 @@ export const skillsData: SkillsData = {
 
 export const projectsData: Project[] = [
   {
-    id: "ima-frontend",
+    id: "greenscan-ml",
     category: "professional",
     period: "2025",
-    mainImageUrl: "/images/projects/ima.png",
-    technologies: ["React.js", "Next.js", "TypeScript", "REST API", "Laravel"],
+    mainImageUrl: "/images/projects/greenscan.png",
+    technologies: ["TensorFlow", "Keras", "Flask", "Python", "Pandas", "VGG16"],
+    repoUrl: "https://github.com/MBIAMY",
+    isFeatured: true,
+    isActive: true,
+  },
+  {
+    id: "alanya-app",
+    category: "professional",
+    period: "2025",
+    mainImageUrl: "/images/projects/alanya-app.png",
+    technologies: ["Node.js", "Express", "Flutter", "WebRTC", "Socket.IO", "MariaDB"],
     repoUrl: undefined,
     isFeatured: true,
     isActive: true,
@@ -69,7 +85,7 @@ export const projectsData: Project[] = [
     mainImageUrl: "/images/projects/fullstack-app.png",
     technologies: ["Spring Boot", "Java", "React.js", "Next.js", "PostgreSQL"],
     repoUrl: "https://github.com/MBIAMY",
-    isFeatured: true,
+    isFeatured: false,
     isActive: true,
   },
   {
@@ -93,16 +109,6 @@ export const certificationsData: Certification[] = [
     id: "java-epfl",
     imageUrl: "/images/certifs/java-epfl.png",
     pdfUrl: "/certifs/java-programming-certification.pdf",
-  },
-  {
-    id: "web-dev-ucdavis",
-    imageUrl: "/images/certifs/web-dev-ucdavis.png",
-    pdfUrl: "/certifs/web-development-certification.pdf",
-  },
-  {
-    id: "api-rest-oc",
-    imageUrl: "/images/certifs/api-rest-oc.png",
-    pdfUrl: "/certifs/api-rest-certification.pdf",
   },
 ];
 
@@ -140,7 +146,7 @@ export const leadershipData: Leadership[] = [
 // ============================================
 
 export const experienceData: Experience[] = [
-  { id: "icorp-frontend", period: "Jan. 2025 – Déc. 2025" },
-  { id: "alanya",         period: "Juil. 2025 – Sept. 2025" },
-  { id: "decatechs",      period: "Juil. 2024 – Sept. 2024" },
+  { id: "alanya",        period: "Juil. 2025 – Sept. 2025" },
+  { id: "greenscan",     period: "Avr. 2025 – Mai 2025" },
+  { id: "ztf-frontend",  period: "Juin 2024 – Sep. 2024" },
 ];  

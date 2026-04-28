@@ -51,7 +51,7 @@ const Contact = ({ dictionary }: ContactProps) => {
             <Mail className="text-cyan-600 dark:text-cyan-400" size={24} />
           </div>
           <div>
-            <p className="text-xs font-mono uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-0.5">08 /</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-cyan-600 dark:text-cyan-400 mb-0.5">07 /</p>
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
               {dictionary.sectionTitles.contact}
             </h2>
