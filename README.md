@@ -5,7 +5,7 @@ This is my personal portfolio built with **Next.js**, showcasing my projects, sk
 ## 📸 Demo
 
 
-![Portfolio Demo](./public/images/projects/portfolio-v2.png)
+![Portfolio Demo](./public/images/projects/portofolio-v2.png)
 
 
 
